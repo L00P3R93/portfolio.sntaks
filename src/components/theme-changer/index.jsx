@@ -83,3 +83,13 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
         </div>
     );
 };
+
+ThemeChanger.propTypes = {
+    theme: PropTypes.string,
+    setTheme: PropTypes.func.isRequired,
+    loading: PropTypes.bool.isRequired,
+    themeConfig: PropTypes.object.isRequired,
+};
+
+export default ThemeChanger;
+  

@@ -80,7 +80,7 @@ export const setUpHotJar = (hotJarConfig) => {
 }
 
 export const sanitizeConfig = (config) => {
-    const CustomTheme = config?.themeConfig?.customTheme || {
+    const customTheme = config?.themeConfig?.customTheme || {
         primary: '#fc055b',
         secondary: '#219aaf',
         accent: '#e8d03a',
@@ -190,7 +190,7 @@ export const noConfigError = {
     subTitle: 'Pass the required config as prop.',
 };
 
-export const tooManyRequestError = (reset) => {
+export const tooManyRequestsError = (reset) => {
     return {
     status: 429,
     title: 'Too Many Requests.',

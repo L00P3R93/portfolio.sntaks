@@ -31,12 +31,14 @@ const bgColor = 'bg-base-300';
 
 
 const GitProfile = ({ config }) => {
+    
     const [error, setError] = useState(
         typeof config === 'undefined' && !config ? noConfigError : null
     );
     const [sanitizedConfig] = useState(
         typeof config === 'undefined' && !config ? null : sanitizeConfig(config)
     );
+
     const [theme, setTheme] = useState(null);
     const [loading, setLoading] = useState(true);
     const [profile, setProfile] = useState(null);
@@ -55,7 +57,7 @@ const GitProfile = ({ config }) => {
     }, [theme]);
 
     const loadData = useCallback(() => {
-        axios.get(`https://api.github.com/users/${sanitizedConfig.username}`)
+        axios.get(`https://api.github.com/users/${sanitizedConfig.github.username}`)
         .then((response) => {
             let data = response.data
             let profileData = {
