@@ -1,4 +1,4 @@
-import axios from axios;
+import axios from 'axios';
 import { Fragment, useCallback, useEffect, useState } from "react";
 import HeadTagEditor from "./head-tag-editor";
 import ErrorPage from './error-page';
