@@ -55,3 +55,12 @@ const HeadTagEditor = ({ profile, theme, googleAnalytics, social }) => {
         </Fragment>
     );
 }
+
+HeadTagEditor.propTypes = {
+    profile: PropTypes.object,
+    theme: PropTypes.string,
+    googleAnalytics: PropTypes.object.isRequired,
+    social: PropTypes.object.isRequired,
+};
+
+export default HeadTagEditor;
